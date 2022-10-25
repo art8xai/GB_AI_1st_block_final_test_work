@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-25 04:05:19 "/>
+        <attribute name="created" value="VXNlcjtSRUNFUFRJT047MjAyMi0wOC0xMDsiMDY6Mzk6NTYgIjsyMjk1"/>
+        <attribute name="edited" value="VXNlcjtSRUNFUFRJT047MjAyMi0wOC0xMzsiMTE6NTI6MTkgIjs3NDsyNDU0"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTZKNk9HMFU7MjAyMi0xMC0yNDsiMDY6MzU6MDYgIjs1O1VzZXI7UkVDRVBUSU9OOzIwMjItMDgtMTA7IjA2OjM5OjU2ICI7Zmxvd2NoYXJ0LmZwcmc7NjYyMw=="/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTZKNk9HMFU7MjAyMi0xMC0yNTsiMDQ6MDU6MTkgIjsyMDsyODA4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="The main method that, from an existing array of strings, forms a new array of strings whose length is less than or equal to N symbols."/>
+            <comment text="string[] GetArrayLessOrEqualSymbolQuantity(string[] arraySource, int symbolQuantity)"/>
+            <comment text="Step 1. Determining the size of a new array."/>
+            <declare name="sizeArrayNew" type="Integer" array="False" size=""/>
+            <assign variable="sizeArrayNew" expression="0"/>
+            <for variable="i" start="0" end="Size(arraySource) - 1" direction="inc" step="1">
+                <if expression="len(arraySource[i]) &lt;= symbolQuantity">
+                    <then>
+                        <assign variable="sizeArrayNew" expression="sizeArrayNew + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <comment text="Step 2. Creating a new empty array of the size calculated above."/>
+            <declare name="arrayNew" type="String" array="True" size="sizeArrayNew"/>
+            <comment text="Step 3. Checking each value of the source array. If the value matches the condition by the number of symbols, then this value is written to a new array."/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <assign variable="j" expression="0"/>
+            <for variable="i" start="0" end="Size(arraySource) - 1" direction="inc" step="1">
+                <if expression="len(arraySource[i]) &lt;= symbolQuantity">
+                    <then>
+                        <assign variable="arrayNew[j]" expression="arraySource[i]"/>
+                        <assign variable="j" expression="j + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <comment text="return arrayNew"/>
+        </body>
+    </function>
+</flowgorithm>
