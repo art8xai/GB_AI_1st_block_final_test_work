@@ -33,3 +33,10 @@ Final test work based on the results of the first block of education
     End For
 
 // return arrayNew
+
+## Flowchart
+
+The block diagram of the main content of the algorithm was prepared using the <a href="http://www.flowgorithm.org/" target="_blank">Flowgorithm</a> program.
+
+![flowchart](flowchart.png)
+*Block diagram of the main content of the algorithm.*
